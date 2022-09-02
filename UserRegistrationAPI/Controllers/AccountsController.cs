@@ -26,6 +26,8 @@ namespace UserRegistrationAPI.Controllers
         }
         public IHttpActionResult PostLogin(Login login)
         {
+            WebAPI_UserEntities db = new WebAPI_UserEntities();
+            var rec = db.tbl_Register.Where(a => a.Email == login.Email && a.Pwd == login.Pwd).FirstOrDefault();
             return Ok();
         }
     }

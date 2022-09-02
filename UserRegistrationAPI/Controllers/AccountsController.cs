@@ -24,6 +24,9 @@ namespace UserRegistrationAPI.Controllers
             db.SaveChanges();
             return Ok();
         }
-        
+        public IHttpActionResult PostLogin(Login login)
+        {
+            return Ok();
+        }
     }
 }
